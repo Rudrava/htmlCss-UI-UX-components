@@ -1,0 +1,114 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1{
+	display: block;
+}
+body {
+	height: 60vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	font-family: sans-serif;
+	background: #d9d7d2;
+}
+form{
+	padding: 1.5em;
+	width: 75%;
+	background-color:#bfc7c1;
+	border-radius: .5em;
+}
+
+.formElement{
+	width: 50%;
+	position: relative;
+	height: 50px;
+	margin: 2em auto;
+	overflow: hidden;
+
+}
+
+.formElement input{
+	width: 100%;
+	height: 100%;
+	color: #595f6e;
+	padding-top: 20px;
+	outline: none;
+	border: none;
+	background: #bfc7c1;
+	border-radius:.5em;
+}
+
+
+.formElement label{
+
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	border-bottom: 1px solid black;
+}
+
+.formElement label::after{
+	content: "";
+	position: absolute;
+	left: 0px;
+	bottom: -1px;
+	height: 100%;
+	width: 100%;
+	border-bottom: 3px solid #5fa8d3;
+	transform: translateX(-100%);
+	transition: all 0.3s ease;
+}
+
+.content-name{ 
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	transition: all 0.8 ease-out;
+}
+
+.formElement input:focus + 
+.label-name .content-name,		/*pushes label name up when on focus*/
+.formElement input:valid + 			/*keeps label there when has content*/
+.label-name .content-name {
+	transform: translateY(-150%);
+	font-size: 14px;
+	color: #5fa8d3;
+}
+
+.formElement input:focus + .label-name::after,
+.formElement input:valid + .label-name::after{
+	transform: translateX(0%);
+}
+
+.submit-button{
+	position: relative;
+	display: inline-block;
+	color: white;
+	background-color: #6cb8d4;
+	text-decoration: none;
+	padding: 1em 2em;
+	border: white 1px solid;
+	margin-top: 40px;
+	outline: none;
+	border-radius: .75em;
+	color: black;
+	font-size: 1rem;
+	left: 65%;
+	transition-property: background-color;
+	transition-timing-function: ease-in;
+}
+
+.submit-button:hover,
+form:valid .submit-button {
+	animation: button;
+	animation-duration: 2s;
+	background-color: #4144cc;
+}
