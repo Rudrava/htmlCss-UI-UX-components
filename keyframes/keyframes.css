@@ -1,0 +1,52 @@
+body{
+	background: #333;
+}
+
+.box{
+	background: white;
+	width: 200px;
+	height: 200px;
+	position: relative;
+	animation-name: firstAnimation;
+	animation-duration: 4s; 
+	animation-iteration-count: 1;
+	/*animation-delay: 2s;*/
+	/*animation-direction: reverse;*/
+	/*animation-direction: alternate;*/
+	animation-timing-function: ease-in;
+	/*animation-timing-function: ease-out;*/
+	/*animation-timing-function: linear;*/
+	animation-fill-mode: forwards;
+}
+
+@keyframes firstAnimation{
+	0%{
+		background-color: white;
+		left: 0;
+		top: 0;
+		border-radius: 0; 
+	}
+	25%{
+		left: 300px;
+		top: 0;
+		background-color: red;
+		border-radius: 50% 0 0 0;}
+	50%{
+		left:300px;
+		top: 300px;
+		background-color: green;
+		border-radius: 50% 50% 0 0;
+	}
+	75%{
+		left: 0;
+		top: 300px;
+		background-color: blue;
+		border-radius: 50% 50% 50% 0;
+	}
+	100%{
+		left: 0;
+		top: 0;
+		background-color: white;
+		border-radius: 50% 50% 50% 50%;
+	}
+}

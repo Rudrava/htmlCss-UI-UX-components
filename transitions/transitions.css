@@ -1,0 +1,24 @@
+body{
+	background: #333;
+}
+
+.box{
+	background-color: white;
+	width: 300px;
+	height: 300px;
+	position: relative;
+	margin: auto;
+	top: 200px;
+	/*transition-property: background, border-radius, transform;*/
+	transition-property: all;
+	transition-duration: 2s, 1s;
+	/*transition-delay: 2s;*/
+	transition-timing-function: linear;
+}
+
+.box:hover{
+	border-radius: 50%; 
+	background: red;
+
+	/*transform: rotate3d(0, 1, 0.5, -180deg);;*/
+}
