@@ -1,0 +1,112 @@
+html,
+ul,
+li{
+	margin: 0;
+	padding: 0;
+}
+
+
+/*Typography*/
+h1{
+	text-align: center;
+	color: rgb(85, 92, 69);
+	font-size: 1.5rem;
+}
+
+body{
+	color: rgb(111, 120, 112);
+	font-family: sans-serif;
+	font-weight: 500;
+	font-size: 1rem;
+}
+span{
+	font-size: 2rem;
+	color: rgb(245, 237, 5);
+}
+
+/*Layout*/
+body{
+	background-color: rgb(192, 240, 232);
+	width: 100%;
+	}
+
+header{
+	background-color: rgb(237, 100, 9);
+}
+
+main{
+	width: 90%;
+	height: 100%;
+}
+
+/*formLayout*/
+.form-container{
+	width: 85%;
+	margin: auto; 
+	/*border: 1px solid red;*/
+	border-radius: 1.5em;
+	background-color: rgb(231, 206, 242);
+}
+
+form{
+	margin: 2em auto;
+	padding: 1.5em 1em;
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+}
+.formLabel{
+	display: inline-block;
+	width: 45%; 
+	text-align: right;
+	color: rgb(57, 59, 59);
+}
+.formInput{
+	width: 45%;
+	height: 1.5em;
+	border: none;
+}
+.formElement{
+	display: flex;
+	margin-bottom: 1.5em;
+	justify-content: space-between;
+}
+.radioInput{
+	color: black;
+	width: 45%; 
+	font-weight: 200;
+}
+
+@media (max-width: 685px){
+	.formElement{
+		display: flex;
+		margin-bottom: 1.5em;
+		flex-direction: column;
+	}
+	.formLabel{
+		/*display: inline-block;*/
+		text-align: left;
+		width: 100%;
+		margin-bottom: .65em; 
+	}
+	.formInput{
+		width: 95%;
+	}
+}
+
+.txtInput{
+	background-color: rgb(231, 206, 242);
+	border-bottom: 1.5px solid black;
+}
+
+#ambitions{
+	border: 1px solid black;
+}
+
+.txtInput:focus,
+.txtInput:active,
+textarea:focus,
+textarea:active
+{
+	outline: none;
+}

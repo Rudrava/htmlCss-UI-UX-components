@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./resources/styleSheet.css">
+	<title>feelGood Form</title>
+</head>
+<body>
+	<header>
+		<h1 class="heading">Hey Tell us a but about Yourself <span class="redText">...</span></h1>
+	</header>	
+	<main>
+		
+		<div class="form-container">
+			<form>
+				<div class="formElement" id="nameDiv">
+					<label class="formLabel" for="name">
+						Name	
+					</label>
+					<input class="formInput txtInput" id="name" type="text" placeholder="Enter your name" name="name"  required>
+				</div>
+				<div class="formElement" id="emailDiv">
+					<label class="formLabel" for="email">
+						Email	
+					</label>
+					<input class="formInput txtInput" id="email" type="email" placeholder="someone@company.com" name="email" required>
+				</div>
+				<div class="formElement" id="ageDiv">
+					<label class="formLabel" for="age">
+						Age	
+					</label>
+					<input class="formInput txtInput" id="age" type="number" placeholder="59" name="age" min="1" max="100" required>
+				</div>
+				<div class="formElement" id="studyingAtDiv ">
+					<label for="studyingAt" class="formLabel">
+						Where Do you Study?
+					</label>
+					<select name="studying" id="studyingAt" class="formInput txtInput">
+						<option value="school">School</option>
+						<option value="college">College</option>
+						<option value="university">University</option>
+					</select>
+				</div>
+				<div class="formElement" id="gender">
+					<label for="gender" class="formLabel">
+						What gender u belong to?
+					</label>
+					<ul class="radioInput" style="list-style: none;">
+						<li class="radioElement">
+							<input class="" type="radio" id="male" name="gender" value="male">
+							<label class="formSelect" for="male">Male</label>
+						</li>
+						<li class="radioElement">
+							<input type="radio" id="female" name="gender" value="female">
+							<label class="formSelect" for="female">Female</label>
+						</li>
+						<li class="radioElement">
+							<input type="radio" id="other" name="gender" value="other">
+							<label class="formSelect" for="other">Other</label>
+						</li>
+					</ul>
+				</div>
+				<div class="formElement" id="ambitionsDiv">
+					<label for="ambitions" class="formLabel">
+						What is your life plan?
+					</label>
+					<textarea name="ambitions" class="formInput" id="ambitions" style="height: 5em;resize:vertical;font-family: Open Sans Condensed;"></textarea>
+				</div>
+				<button class="button" id="submit" type="submit">Submit</button>
+			</form>
+		</div>	
+	</main>
+</body>
+</html>
