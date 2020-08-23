@@ -1,0 +1,115 @@
+/*FOnt*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/*reset*/
+*{
+	margin: 0;
+	padding: 0; 
+}
+
+body {
+	background-color: #f7f8fc;
+	font-family: 'Open Sans', Sans-Serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+/*card - container*/
+.container {
+	display: flex;
+	width: 80%;
+	justify-content: center;
+	margin: auto;
+}
+
+/*card*/
+.card {
+	background: #fff;
+	/*border:1px solid black;*/
+	border-radius: 2%;
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	width: 350px;
+	margin-left: 1.5em;
+}
+
+
+/*tag styling*/
+.tag{
+	background: #777;
+	border-radius: 3em;
+	font-size: .8rem;
+	margin: 0;
+	color: #fff;
+	padding: .2em .6em;
+	text-transform: uppercase;
+}
+
+.tag-teal{
+	background: #92d4e4;
+}
+
+.tag-purple{
+	background: #3d2d94;
+}
+
+.tag-pink{
+	background: #c62bcb;
+}
+
+/*card header*/
+.card-header img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+/*card body*/
+.card-body {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 1.5em;
+	min-height: 250px;
+}
+
+.card-body span, h4, p, .user, .user-info{
+	margin-top: 1.2em;
+} 
+
+.user {
+	margin-top: auto;
+	display: flex;
+	/*border:1px solid red;*/
+}
+
+.user img{
+	width: 2.6em;
+	height: 2.6em;
+	border-radius: 50%;
+	margin-right: 1.2em;
+	/*border:1px solid green;	*/
+}
+
+.user-info {
+	/*border: 1px solid black;*/
+	margin: 0;
+
+}
+
+.user-info small {
+	color: #888785;
+}
+
+@media (max-width: 940px) {
+	.container {
+		flex-direction: column;
+		align-items: center;
+	}	
+	.card{
+		margin: 1.5em;  
+	}
+}
