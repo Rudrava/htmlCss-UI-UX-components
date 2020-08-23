@@ -13,7 +13,6 @@
     </h3>
     <ul>
         <li>
-           
           <h4>CARDS</h4>
             <ul>
                 <li>
@@ -32,12 +31,13 @@
     </ul>
 </div>
 
-<ul>
+
       
 <hr>
 
 ## RESOURCES
-    <li>
+<ul>
+      <li>
         <a target="_blank" href="https://www.youtube.com/watch?v=zHUpx90NerM">applied projects (<b>TRVERSY MEDIA</b>)Animations crash course</a>
     </li>
     <li>
