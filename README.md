@@ -36,7 +36,7 @@
       
 <hr>
 
-##RESOURCES
+## RESOURCES
     <li>
         <a target="_blank" href="https://www.youtube.com/watch?v=zHUpx90NerM">applied projects (<b>TRVERSY MEDIA</b>)Animations crash course</a>
     </li>
