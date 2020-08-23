@@ -13,7 +13,7 @@
     </h3>
     <ul>
         <li>
-            <h4>CARDS</h4>
+          <h4>CARDS</h4>
             <ul>
                 <li>
                     <a href="codepen.io/Rudrava/full/MWyJyQO target="_blank">BLOG CARDS</a>
@@ -31,8 +31,13 @@
     </ul>
 </div>
 
+
+      
+<hr>
+
+## RESOURCES
 <ul>
-    <li>
+      <li>
         <a target="_blank" href="https://www.youtube.com/watch?v=zHUpx90NerM">applied projects (<b>TRVERSY MEDIA</b>)Animations crash course</a>
     </li>
     <li>
