@@ -1,0 +1,123 @@
+@import url(
+	'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300;1,600&display=swap'
+	);
+
+/*reset*/
+*{
+	margin: 0;
+	padding: 0; 
+}
+::placeholder {
+	color: white;
+}
+body {
+	background-color: #1c223b;
+	color: #fff;
+	font-family: 'Source Sans Pro', Sans-Serif;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+
+
+.table-container {
+	/*border: 1px solid red;*/
+	background-color: #273349;
+	border-radius: .6em;
+	box-shadow: 0 .3em .6em rgba(12, 16, 31, 0.4);
+	padding: 6.2em;
+	margin: auto;
+	width: 62em; 
+}
+
+table {
+	color: #e2e2e2;
+	padding: .6em;
+	width: 100%;
+}
+
+table th,td {
+	padding: .8em;
+	text-align: left;
+}
+
+table tbody tr {
+	background-color: #1c223b;
+}
+
+table tbody tr:hover {
+	background-color: #151b31;
+	box-shadow: 0 .2 .3 rgba(0, 0, 0, .3);
+}
+
+table tr td:first-of-type {
+	border-top-left-radius: .3em;
+	border-bottom-left-radius: .3em;
+}
+
+table tr td:last-of-type {
+	border-top-right-radius: .3em;
+	border-bottom-right-radius: .3em;
+	text-align: center;
+}
+
+table tbody tr.priority-200 td:first-of-type{
+	border-left: .3em solid #9c7c64;
+}
+
+table tbody tr.priority-300 td:first-of-type{
+	border-left: .3em solid #5c8cdc;
+} 
+
+table tbody tr.priority-600 td:first-of-type{
+	border-left: .3em solid #40c587;
+}
+
+table tbody tr td .fa-circle{
+	transform: scale(.5);
+}
+
+table tbody tr.priority-200 td .fa-circle{
+		color: #9c7c64;
+}
+
+table tbody tr.priority-300 td .fa-circle{
+		color: #5c8cdc;
+}
+
+table tbody tr.priority-600 td .fa-circle{
+		color: #40c587;
+}
+
+.delete {
+	background-color: #242c4c;
+	border: 0;
+	border-radius: .1em;
+	color: #909090;
+	font-size: 1rem;
+	padding: .3em .6em;
+	opacity: 0;
+}
+
+table tbody tr:hover .delete {
+	opacity: 1;
+}
+
+@media (max-width: 768px) {
+	.table-container {
+		width: 100%:;
+		padding: 3em;
+	}
+
+	table tbody tr .delete {
+		opacity: 1;
+	}
+
+	table th:nth-of-type(3), 
+	td:nth-of-type(3) {
+			display: none;
+	}
+}
