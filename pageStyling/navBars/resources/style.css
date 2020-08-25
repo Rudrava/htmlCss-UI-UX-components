@@ -1,0 +1,192 @@
+:root{
+	font-size: 16px;
+	font-family: 'Open-Sans';
+	--text-primary: #b6b6b6;
+	--text-secondary: #ececec;
+	--bg-primary: #23232e;
+	--bg-secondary: #141418;
+	--transition-speed: 600ms;
+
+};
+
+/*RESET*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+/*body color set*/
+body {
+	color: black;
+	background: #fff;
+}
+
+/*scroll bar theme up*/
+
+body::-webkit-scrollbar{
+	width: .35em;
+}
+
+body::-webkit-scrollbar-track{
+	background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #6649b8;
+}
+
+
+/*main margin as our navbar stays on left for big screens*/
+main{
+	margin-left: 5rem;
+	padding: 1rem;
+}
+
+
+/*navbar styling*/
+
+.navbar {	
+	position: fixed;
+	background: var(--bg-primary);
+	/*animation for hover over expansion*/
+	transition: width 200ms ease;
+}
+
+.navbar-nav{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+}
+
+.nav-item {
+	/*border: 1px solid red;*/
+	width: 100%;
+}
+
+/*pushing last item to bottom*/
+.nav-item:last-child {
+	margin-top: auto;  
+}
+
+
+.nav-link {
+	display: flex;
+	align-items: center;
+	height: 5rem;
+	color: var(--text-primary);
+	text-decoration: none;
+	filter: grayscale(100%) opacity(0.7);
+	transition: var(--transition-speed);
+}
+
+.nav-link:hover{
+	filter: grayscale(0%) opacity(1);
+	background: var(--bg-secondary);
+	color: var(--text-secondary); 
+	/*border: 1px solid red;*/
+}
+/*setting up for expansion when hovered*/
+.link-text {
+	display: none; 	
+	margin-left: 1rem;
+}
+
+.nav-link svg{
+	min-width: 2rem;
+	margin: 0 1.5rem;
+}
+
+/*some of the styling and transition triggers are in  the large media query
+as we dont not want to show them on smol screens and this is sort of 
+a MOBILE FIRST APPROACH*/
+
+/*changing colors of svg on hover*/
+
+.fa-primary {
+	color: #ff7eee;
+}
+
+.fa-secondary {
+	color: #df49a6;
+}
+
+.fa-primay,
+.fa-secondary {
+	transition: var(--transition-speed);
+}
+
+/*logostyling */
+.logo {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+	text-align: center;
+	color: var(--text-secondary);
+	background: var(--bg-secondary);
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	letter-spacing: .3ch;
+	width: 100%;
+}
+
+.logo svg{
+	transform: rotate(0deg);
+	transition: transform var(--transition-speed);
+}
+
+
+.navbar:hover .logo svg{
+	transform: rotate(-180deg);
+}
+
+
+
+/*RESPONSIVITY */
+/*smol screens*/
+@media only screen and (max-width: 600px) {
+	.navbar {
+		bottom: 0;
+		left: 0;
+		width: 100vw;
+		height: 5rem;
+	}
+
+	.logo {
+		display: none;
+	}
+
+	.navbar-nav {
+		flex-direction: row;
+	}
+
+	.nav-link {
+		justify-content: center;
+	}
+
+	main {
+		margin: 0;
+	}
+}
+
+/*large screens*/
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+    left: 0;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+}
